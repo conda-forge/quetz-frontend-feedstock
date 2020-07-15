@@ -12,7 +12,8 @@ source:
 
 build:
   noarch: generic
-  skip: true
+  ignore_run_exports:
+    - libstdc++
   number: 0
   script: >
     cd quetz_frontend;
