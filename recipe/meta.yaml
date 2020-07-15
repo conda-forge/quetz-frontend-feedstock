@@ -12,7 +12,6 @@ source:
 
 build:
   noarch: generic
-  skip: true
   number: 0
   script: >
     cd quetz_frontend;
