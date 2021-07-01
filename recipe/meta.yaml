@@ -1,37 +1,33 @@
 {% set name = "quetz-frontend" %}
-{% set version = "0.1.2" %}
-{% set frontend_dir = "share/quetz/frontend" %}  
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/TheSnakePit/quetz/archive/frontend_v{{ version }}.tar.gz
-  sha256: 83d3b20e80646c9147cc96e124395b9f68cfcd0c1108a63fa02fb46d99cc275e
+  url: https://github.com/mamba-org/quetz-frontend/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 3a3f87704d2373030da8e6653bb8c3f6547fac6200984c3ffdac804ecff88513
 
 build:
-  noarch: generic
-  ignore_run_exports:
-    - libstdc++
+  noarch: python
   number: 0
-  script: >
-    cd quetz_frontend; npm install; npm run build; mkdir -p {{ PREFIX }}/{{ frontend_dir }}; cp -r dist/* {{ PREFIX }}/{{ frontend_dir }};
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - {{ compiler('cxx') }}
-    - nodejs
   host:
+    - python >=3.6
+    - nodejs
+    - jupyter-packaging
   run:
+    - python >=3.6
 
 test:
-  commands:
-    - test -f $PREFIX/{{ frontend_dir }}/index.html
-    - test `ls -1 $PREFIX/{{ frontend_dir }}/js/ | wc -l` -eq 4
+  imports:
+    - quetz_frontend
 
 about:
-  home: https://github.com/TheSnakePit/quetz
+  home: https://github.com/mamba-org/quetz-frontend
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
