@@ -19,6 +19,7 @@ requirements:
     - python >=3.6
     - pip
     - nodejs >=12
+    - yarn
     - jupyter-packaging
   run:
     - python >=3.6
