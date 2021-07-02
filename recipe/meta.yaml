@@ -23,6 +23,7 @@ requirements:
     - jupyter-packaging
   run:
     - python >=3.6
+    - quetz >=0.1.0
 
 test:
   imports:
