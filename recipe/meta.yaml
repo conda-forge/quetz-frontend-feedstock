@@ -1,13 +1,13 @@
 {% set name = "quetz-frontend" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/mamba-org/quetz-frontend/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 3a3f87704d2373030da8e6653bb8c3f6547fac6200984c3ffdac804ecff88513
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}-server/{{ name }}-server-{{ version }}.tar.gz
+  sha256: 36010220d2aa908e475ede2cb7ebb4cac80934d1378c55cf5f799b43e62832f6
 
 build:
   noarch: python
