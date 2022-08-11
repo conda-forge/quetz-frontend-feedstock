@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quetz-frontend-{{ version }}.tar.gz
-  sha256: d1686ab4184ab60346bace56fecfd0608b75eafd985b4640215ff497d936b286
+  sha256: d97497bb805c24446969828ab678f62645fa9ddea7847f8b09ff40b2e73356c9
 
 build:
   number: 0
