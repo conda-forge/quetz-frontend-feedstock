@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.7
     - quetz >=0.4.0
-    - authlib<1.0.0
+    - authlib <1.0.0
 
 test:
   imports:
