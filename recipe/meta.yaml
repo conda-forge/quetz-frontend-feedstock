@@ -26,6 +26,7 @@ requirements:
     - quetz >=0.4.0
     - authlib <1.0.0
     - httpx ~=0.20.0
+    - h11 <0.13,>=0.11
 
 test:
   imports:
