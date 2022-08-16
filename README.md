@@ -144,6 +144,7 @@ Feedstock Maintainers
 =====================
 
 * [@fcollonval](https://github.com/fcollonval/)
+* [@hbcarlos](https://github.com/hbcarlos/)
 * [@mariobuikhuizen](https://github.com/mariobuikhuizen/)
 * [@wolfv](https://github.com/wolfv/)
 
