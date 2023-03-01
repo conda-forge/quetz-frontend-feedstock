@@ -1,5 +1,5 @@
 {% set name = "quetz-frontend" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quetz-frontend-{{ version }}.tar.gz
-  sha256: d1686ab4184ab60346bace56fecfd0608b75eafd985b4640215ff497d936b286
+  sha256: de42c03c7c1395554b8415ef9536987d9c8b400b862831891a5c8129d45bf28e
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
