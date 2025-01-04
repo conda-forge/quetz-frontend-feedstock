@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quetz-frontend-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quetz-frontend-{{ version }}.tar.gz
   sha256: e23fe342fec6c300ed2684eaebde665ff9f916ce4b0a6fbfabddd18d84b6d031
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - jupyter-packaging
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - quetz >=0.4.0
 
 test:
@@ -33,6 +33,7 @@ test:
     - quetz-frontend --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/mamba-org/quetz-frontend
